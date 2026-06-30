@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Portfolio</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header>
+
+    <nav>
+        <img src="assets/images/E-vazo_logo_v2.png"  id="logo" alt="">
+
+        <div class="menu-toggle">☰</div>
+
+        <ul class="sidebar">
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">À propos</a></li>
+            <li><a href="#">Albums</a></li>
+            <li><a href="#">Concerts</a></li>
+            <li><a href="#">Galerie</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+    </nav>
+
+    <section class="hero">
+        <h1>Live Music Experience</h1>
+
+        <p>
+            Guitariste • Compositeur • Chanteur
+        </p>
+
+        <a href="#" class="btn-anime">
+            <img src="assets/images/E-vazo_play_button_circle_transparent.png" alt="Découvrir">
+        </a>
+    </section>
+
+</header>
+
+<section class="about">
+
+    <h2>À propos</h2>
+
+    <p>
+        Passionné par la musique depuis toujours, je compose des morceaux
+        mélangeant <span class="highlight">Rock</span>,
+        <span class="highlight" id="blue">Blues</span> et musique moderne.
+    </p>
+
+    <p>
+        J’ai commencé la guitare à l’âge de 12 ans et j’ai participé à plusieurs
+        projets musicaux locaux.
+    </p>
+
+    <p>
+        Mon objectif est de créer des sons authentiques qui transmettent des émotions fortes
+        sur scène comme en studio.
+    </p>
+
+</section>
+
+
+<section class="albums">
+
+    <h2>Derniers Albums</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="assets/images/istockphoto-2104421890-612x612.jpg">
+            <h3>Echoes</h3>
+        </div>
+
+        <div class="card">
+            <img src="assets/images/images2.jpeg">
+            <h3>Night Lights</h3>
+        </div>
+
+        <div class="card">
+            <img src="assets/images/Buckley---The-revival-of-a-little-known-bagpipe-Credit-Vladislav-Steinbauer.webp">
+            <h3>Dream Road</h3>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="concerts">
+
+    <h2>Concerts</h2>
+
+    <div class="event">
+        <span>12 Août 2026</span>
+        <p>Festival Music Live</p>
+    </div>
+
+    <div class="event">
+        <span>25 Septembre 2026</span>
+        <p>Rock Arena</p>
+    </div>
+
+    <div class="event">
+        <span>10 Novembre 2026</span>
+        <p>Acoustic Night</p>
+    </div>
+
+</section>
+
+
+<section class="gallery">
+
+    <h2>Galerie</h2>
+
+    <div class="grid">
+
+        <img src="assets/images/8990-Musician-Opportunities-Web-Banner-1024x338-1.jpg">
+        <img src="assets/images/4d095f8aec1743cf917f209ff516b3810e423f77-1440x960.webp">
+        <img src="assets/images/8990-Musician-Opportunities-Web-Banner-1024x338-1.jpg">
+        <img src="assets/images/4d095f8aec1743cf917f209ff516b3810e423f77-1440x960.webp">
+        <img src="assets/images/4d095f8aec1743cf917f209ff516b3810e423f77-1440x960.webp">
+        <img src="assets/images/istockphoto-2104421890-612x612.jpg">
+
+    </div>
+
+</section>
+
+
+<section class="contact">
+
+    <h2>Contact</h2>
+
+    <form>
+
+        <input type="text" placeholder="Nom">
+
+        <input type="email" placeholder="Email">
+
+        <textarea placeholder="Votre message"></textarea>
+
+        <button class="btn">
+            Envoyer
+        </button>
+
+    </form>
+
+</section>
+
+
+<footer>
+
+    © 2026 E- vazo Music Portfolio
+
+</footer>
+
+</body>
+<script>
+    const toggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector("nav ul");
+
+    toggle.addEventListener("click", () => {
+        menu.classList.toggle("active");
+    });
+</script>
+</html>

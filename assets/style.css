@@ -1,0 +1,371 @@
+*{
+    margin: 0;;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+    background:#111;
+    color:white;
+}
+
+header{
+    height:100vh;
+    background:url("images/background.jpg") center/cover;
+    margin-bottom: 20px;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 8%;
+    background:rgba(0,0,0,.4);
+}
+
+nav h2{
+    color:#e8a04c;
+    font-size: 50px;
+
+}
+.imglogo {
+    display: flex;
+}
+
+#logo{
+    height: 60px;   /* ajuste selon ton design */
+    width: auto;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav li{
+    margin-left:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.hero{
+    height:85vh;
+    background-image: url("images/images.jpeg");
+    background-size: cover;
+    background-position: center;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:70px;
+}
+
+.hero p{
+    margin:20px 0;
+    font-size:22px;
+}
+
+.btn{
+    padding:14px 35px;
+    background:#e9d206;
+    color:black;
+    text-decoration:none;
+    border-radius:40px;
+    font-weight: bold;
+}
+/* bouton animation */
+.btn-anime{
+    display: inline-block;
+}
+
+.btn-anime img{
+    width: 180px;
+    height: auto;
+    display: block;
+
+    animation: popupVibre 1.5s infinite;
+}
+@keyframes popupVibre {
+
+    0%, 80%, 100%{
+        transform: scale(1) rotate(0deg);
+    }
+
+    82%{
+        transform: scale(1.12);
+    }
+
+    84%{
+        transform: translateX(-3px) rotate(-2deg);
+    }
+
+    86%{
+        transform: translateX(3px) rotate(2deg);
+    }
+
+    88%{
+        transform: translateX(-3px) rotate(-2deg);
+    }
+
+    90%{
+        transform: translateX(3px) rotate(2deg);
+    }
+
+    92%{
+        transform: translateX(0) scale(1);
+    }
+}
+
+section{
+    padding:80px 10%;
+}
+
+/* animation h2 */
+
+section h2{
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 40px;
+
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+section h2::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 3px;
+
+    background: #e9d206;
+    border-radius: 10px;
+
+    transition: width .35s ease;
+}
+
+section h2:hover::after{
+    width: 100%;
+}
+
+.about {
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+.about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: url("images/8990-Musician-Opportunities-Web-Banner-1024x338-1.jpg");
+    background-size: cover;
+    background-position: center;
+
+    filter: blur(6px);
+    transform: scale(1.1); /* évite les bords visibles du blur */
+
+    z-index: 0;
+}
+.about > * {
+    position: relative;
+    z-index: 1;
+}
+
+.about p{
+    text-align:center;
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+}
+.highlight{
+    color: #e8a04c;
+    font-weight: bold;
+    text-shadow: 0 0 8px rgba(233, 210, 6, 0.6);
+}
+#blue {
+    color: rgb(7, 7, 94);
+    -webkit-text-stroke: 0.5px rgb(255, 253, 253);
+}
+
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#1d1d1d;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.card img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+}
+
+.card h3{
+    padding:20px;
+}
+
+.event{
+    display:flex;
+    justify-content:space-between;
+    padding:20px;
+    margin-bottom:20px;
+    background:#1d1d1d;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,2fr));
+    gap:20px;
+}
+
+.grid img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+form{
+    max-width:700px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+}
+
+input,
+textarea{
+    margin-bottom:20px;
+    padding:15px;
+    background:#222;
+    color:white;
+    border:none;
+}
+
+textarea{
+    height:180px;
+}
+
+button{
+    padding:15px;
+    background:#ff4747;
+    color:white;
+    border:none;
+    cursor:pointer;
+    font-size:18px;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:black;
+}
+
+/* version android  */
+.menu-toggle{
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+.sidebar{
+    display: flex;
+    list-style: none;
+}
+@media (max-width: 768px) {
+    .btn-anime img{
+        animation: popupVibreMobile 2.5s infinite;
+    }
+
+    /* bouton hamburger */
+    .menu-toggle{
+        display:block;
+        font-size:30px;
+        color:white;
+        cursor:pointer;
+        z-index: 1100;
+    }
+
+    /* menu devient sidebar */
+    nav ul{
+        position: fixed;
+        top: 0;
+        right: -260px;
+
+        width: 250px;
+        height: 100vh;
+
+        background: rgba(0,0,0,0.95);
+
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        gap: 25px;
+
+        transition: right 0.3s ease;
+        z-index: 1000;
+    }
+
+    /* quand menu actif */
+    nav ul.active{
+        right: 0;
+    }
+
+    nav li{
+        margin: 0;
+    }
+
+    nav a{
+        font-size: 20px;
+    }
+}
+@keyframes popupVibreMobile {
+
+    0%, 85%, 100%{
+        transform: scale(1);
+    }
+
+    88%{
+        transform: scale(1.08);
+    }
+
+    90%{
+        transform: translateX(-2px);
+    }
+
+    92%{
+        transform: translateX(2px);
+    }
+
+    94%{
+        transform: translateX(-2px);
+    }
+
+    96%{
+        transform: translateX(0);
+    }
+}
