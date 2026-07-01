@@ -39,8 +39,8 @@
 
             <li>
                 <a href="#" data-tooltip="Albums">
-                    <span class="nav-text">Albums</span>
                     <i class="fa-solid fa-compact-disc"></i>
+                    <span class="nav-text">Albums</span>
                     
                 </a>
             </li>
@@ -209,8 +209,28 @@
     © 2026 E- vazo Music Portfolio
 
 </footer>
+<button class="theme-toggle" id="theme-toggle">
+    <i class="fa-solid fa-moon"></i>
+</button>
 
 </body>
+<script>
+    const themeBtn = document.getElementById("theme-toggle");
+    const icon = themeBtn.querySelector("i");
+
+    themeBtn.addEventListener("click", () => {
+
+        document.body.classList.toggle("light");
+
+        if(document.body.classList.contains("light")){
+            icon.classList.remove("fa-moon");
+            icon.classList.add("fa-sun");
+        }else{
+            icon.classList.remove("fa-sun");
+            icon.classList.add("fa-moon");
+        }
+});
+</script>
 <!-- nav -->
 <script src="assets/js/nav.js"></script>
 <!-- image hero  -->
