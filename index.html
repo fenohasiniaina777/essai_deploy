@@ -5,23 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Portfolio</title>
     <link rel="stylesheet" href="assets/style.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"> 
 </head>
 <body>
 
 <header>
 
     <nav>
-        <img src="assets/images/E-vazo_logo_v2.png"  id="logo" alt="">
 
-        <div class="menu-toggle">☰</div>
+        <img src="assets/images/E-vazo_logo_v2.png" id="logo" alt="">
+
+        <div class="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
 
         <ul class="sidebar">
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">À propos</a></li>
-            <li><a href="#">Albums</a></li>
-            <li><a href="#">Concerts</a></li>
-            <li><a href="#">Galerie</a></li>
-            <li><a href="#">Contact</a></li>
+
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-house"></i>
+                    Accueil
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-user"></i>
+                    À propos
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-compact-disc"></i>
+                    Albums
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-music"></i>
+                    Concerts
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-image"></i>
+                    Galerie
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-envelope"></i>
+                    Contact
+                </a>
+            </li>
+
         </ul>
 
     </nav>
@@ -159,10 +201,21 @@
 </body>
 <script>
     const toggle = document.querySelector(".menu-toggle");
-    const menu = document.querySelector("nav ul");
+    const sidebar = document.querySelector(".sidebar");
 
-    toggle.addEventListener("click", () => {
-        menu.classList.toggle("active");
+    // Ouvrir et fermer avec le bouton
+    toggle.addEventListener("click", (e) => {
+        e.stopPropagation();
+        sidebar.classList.toggle("active");
     });
+
+    // Ferme la sidebar si on clique ailleur
+    document.addEventListener("click", () => {
+        sidebar.classList.remove("active");
+    })
 </script>
+<!-- image hero  -->
+ <script src="assets/animation.js"></script>
+
+
 </html>

@@ -295,6 +295,59 @@ footer{
     display: flex;
     list-style: none;
 }
+
+/* nav ul.sidebar a{
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    color:white;
+    text-decoration:none;
+
+    font-size:20px;
+    font-weight:bold;
+
+    transition:.3s;
+} */
+
+nav ul.sidebar a{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    padding: 12px 20px;
+    border-radius: 10px;
+
+    transition: all .3s ease;
+}
+/* icon style */
+nav ul.sidebar i{
+    color:#e8a04c;
+    width:25px;
+    text-align:center;
+    font-size:22px;
+}
+
+/* icon animate */
+nav ul.sidebar a:hover{
+    color: black;
+    background: #e8a04c;
+    border: 1px solid #ffffff;
+    transform:translateX(8px);
+}
+
+nav ul.sidebar a:hover i{
+    transform:rotate(10deg) scale(1.2);
+    color: black;
+    transition:.3s;
+}
+
 @media (max-width: 768px) {
     .btn-anime img{
         animation: popupVibreMobile 2.5s infinite;
