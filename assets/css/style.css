@@ -454,9 +454,10 @@ body.light p {
     color: #d8c1a7;
 }
 
-body.light .concerts .event{
+/* natao js fa mety ihany koa
+/* body.light .concerts .event{
     color: #e9d206;
-}
+} */
 
 @media (max-width: 768px) {
     .btn-anime img{

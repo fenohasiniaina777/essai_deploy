@@ -217,18 +217,34 @@
 <script>
     const themeBtn = document.getElementById("theme-toggle");
     const icon = themeBtn.querySelector("i");
+    const eventElements = document.querySelectorAll(".concerts .event");
+    
 
     themeBtn.addEventListener("click", () => {
 
         document.body.classList.toggle("light");
 
-        if(document.body.classList.contains("light")){
+        const isLight = document.body.classList.contains("light");
+
+        // icône
+        if(isLight){
             icon.classList.remove("fa-moon");
             icon.classList.add("fa-sun");
         }else{
             icon.classList.remove("fa-sun");
             icon.classList.add("fa-moon");
         }
+
+        // 🎯 changement des concerts
+        eventElements.forEach(el => {
+            if(isLight){
+                el.style.color = "#e9d206";
+                el.style.background = "#000000"
+            }else{
+                el.style.color = "";
+                el.style.background = ""
+            }
+        });
 });
 </script>
 <!-- nav -->
