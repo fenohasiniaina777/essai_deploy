@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Portfolio</title>
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"> 
 </head>
@@ -25,42 +25,48 @@
             <li>
                 <a href="#">
                     <i class="fa-solid fa-house"></i>
-                    Accueil
+                    <span class="nav-text">Accueil</span>
                 </a>
             </li>
 
             <li>
                 <a href="#">
                     <i class="fa-solid fa-user"></i>
-                    À propos
+                    <span class="nav-text">À propos</span>
+                   
                 </a>
             </li>
 
             <li>
                 <a href="#">
+                    <span class="nav-text">Albums</span>
                     <i class="fa-solid fa-compact-disc"></i>
-                    Albums
+                    
                 </a>
             </li>
 
             <li>
                 <a href="#">
                     <i class="fa-solid fa-music"></i>
-                    Concerts
+                    <span class="nav-text">Concerts</span>
+
                 </a>
             </li>
 
             <li>
                 <a href="#">
                     <i class="fa-solid fa-image"></i>
-                    Galerie
+                    <span class="nav-text">Galerie</span>
+                    
                 </a>
             </li>
 
             <li>
                 <a href="#">
                     <i class="fa-solid fa-envelope"></i>
-                    Contact
+                    <span class="nav-text">Contact</span>
+
+                    
                 </a>
             </li>
 
@@ -199,23 +205,10 @@
 </footer>
 
 </body>
-<script>
-    const toggle = document.querySelector(".menu-toggle");
-    const sidebar = document.querySelector(".sidebar");
-
-    // Ouvrir et fermer avec le bouton
-    toggle.addEventListener("click", (e) => {
-        e.stopPropagation();
-        sidebar.classList.toggle("active");
-    });
-
-    // Ferme la sidebar si on clique ailleur
-    document.addEventListener("click", () => {
-        sidebar.classList.remove("active");
-    })
-</script>
+<!-- nav -->
+<script src="assets/js/nav.js"></script>
 <!-- image hero  -->
- <script src="assets/animation.js"></script>
+<script src="assets/js/animation.js"></script>
 
 
 </html>

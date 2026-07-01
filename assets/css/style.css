@@ -118,7 +118,44 @@ nav a{
     }
 
     90%{
-        transform: translateX(3px) rotate(2deg);
+        transform: translateX(3px) rotate(2deg);@media (max-width: 1000px) and (min-width: 768px) {
+
+    nav{
+        padding: 20px 5%;
+    }
+
+    nav ul{
+        gap: 15px;
+    }
+
+    nav a{
+        font-size: 18px;
+    }
+
+    #logo{
+        height: 50px;
+    }
+
+    .hero h1{
+        font-size: 50px;
+    }
+
+    .hero p{
+        font-size: 18px;
+    }
+
+    section{
+        padding: 60px 6%;
+    }
+
+    .cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
     }
 
     92%{
@@ -295,20 +332,6 @@ footer{
     list-style: none;
 }
 
-/* nav ul.sidebar a{
-    display:flex;
-    align-items:center;
-    gap:15px;
-
-    color:white;
-    text-decoration:none;
-
-    font-size:20px;
-    font-weight:bold;
-
-    transition:.3s;
-} */
-
 nav ul.sidebar a{
     display: flex;
     align-items: center;
@@ -347,7 +370,7 @@ nav ul.sidebar a:hover i{
     transition:.3s;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 678px) {
     .btn-anime img{
         animation: popupVibreMobile 2.5s infinite;
     }
@@ -395,6 +418,8 @@ nav ul.sidebar a:hover i{
         font-size: 20px;
     }
 }
+
+
 @keyframes popupVibreMobile {
 
     0%, 85%, 100%{
@@ -419,5 +444,39 @@ nav ul.sidebar a:hover i{
 
     96%{
         transform: translateX(0);
+    }
+}
+@media (max-width: 1368px) and (min-width: 769px) {
+
+    nav {
+        padding: 10px 4%;
+    }
+
+    /* On cache le texte */
+    .nav-text {
+        display: none;
+    }
+
+    /* On ajuste l'icône */
+    nav ul.sidebar a i {
+        font-size: 26px;
+        margin: 0;
+    }
+
+    /* On ajuste l'espacement du lien pour qu'il soit bien cliquable */
+    nav ul.sidebar a {
+        padding: 12px 18px;
+        gap: 0;
+    }
+
+    nav ul {
+        gap: 0px;
+    }
+    nav li {
+        margin-left: 0;
+    }
+
+    #logo {
+        height: 45px;
     }
 }
