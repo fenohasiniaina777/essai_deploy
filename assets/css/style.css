@@ -74,6 +74,23 @@ nav a{
     margin:20px 0;
     font-size:22px;
 }
+/* btn voir plus */
+.btn_voir_plus {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn_voir_plus button{
+    background:#e9d206;
+    color:black;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
 
 .btn{
     padding:14px 35px;
