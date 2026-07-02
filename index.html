@@ -12,68 +12,7 @@
 
 <header>
 
-    <nav>
-
-        <img src="assets/images/E-vazo_logo_v2.png" id="logo" alt="">
-
-        <div class="menu-toggle">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-
-        <ul class="sidebar">
-
-            <li>
-                <a href="#" data-tooltip="Accueil">
-                    <i class="fa-solid fa-house"></i>
-                    <span class="nav-text">Accueil</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="#" data-tooltip="À propos">
-                    <i class="fa-solid fa-user"></i>
-                    <span class="nav-text">À propos</span>
-                   
-                </a>
-            </li>
-
-            <li>
-                <a href="#" data-tooltip="Albums">
-                    <i class="fa-solid fa-compact-disc"></i>
-                    <span class="nav-text">Albums</span>
-                    
-                </a>
-            </li>
-
-            <li>
-                <a href="#" data-tooltip="Concerts">
-                    <i class="fa-solid fa-music"></i>
-                    <span class="nav-text">Concerts</span>
-
-                </a>
-            </li>
-
-            <li>
-                <a href="#" data-tooltip="Galerie">
-                    <i class="fa-solid fa-image"></i>
-                    <span class="nav-text">Galerie</span>
-                    
-                </a>
-            </li>
-
-            <li>
-                <a href="#" data-tooltip="Contact">
-                    <i class="fa-solid fa-envelope"></i>
-                    <span class="nav-text">Contact</span>
-
-                    
-                </a>
-            </li>
-
-        </ul>
-
-    </nav>
-
+    <div id="nav-placeholder"></div>
     <section class="hero">
         <h1>Live Music Experience</h1>
 
@@ -257,6 +196,31 @@
         });
 });
 </script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    // 1. On cible le placeholder dans le index.html
+    const placeholder = document.getElementById("nav-placeholder");
+    if (!placeholder) return;
+
+    // 2. On va chercher le contenu du fichier nav.html
+    fetch("partials/nav.html")
+        .then(res => {
+            if (!res.ok) {
+                throw new Error("Impossible de charger le fichier nav.html");
+            }
+            return res.text();
+        })
+        .then(html => {
+            // 3. On injecte le HTML de nav.html à l'intérieur du placeholder
+            placeholder.innerHTML = html;
+            
+            // 4. Si tu as un autre script pour animer le menu (comme le menu burger)
+            if (typeof initNav === "function") initNav();
+        })
+        .catch(err => console.error("Erreur d'inclusion :", err));
+    });
+</script>
+<!-- nav html -->
 <!-- nav -->
 <script src="assets/js/nav.js"></script>
 <!-- image hero  -->
