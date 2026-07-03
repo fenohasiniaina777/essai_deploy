@@ -22,6 +22,12 @@ nav{
     align-items:center;
     padding:25px 8%;
     background:rgba(0,0,0,.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+
 }
 
 nav h2{
@@ -214,12 +220,35 @@ section h2::after{
 section h2:hover::after{
     width: 100%;
 }
+#apropos{
+    margin-top: 50px;
+    
+}
+.competence {
+    margin-top: 50px;
+}
+.progress {
+    margin-top:  10px;
+    margin-bottom: 10px;
+}
+.skill-items span {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.pourcentage {
+    right: 20px;
+}
 
 .about {
     position: relative;
     overflow: hidden;
     color: white;
+    padding-top: 30px;
+    padding-bottom: 50px;
 }
+
 .about::before {
     content: "";
     position: absolute;
@@ -346,10 +375,28 @@ button{
     font-size:18px;
 }
 
+#apropos {
+    display: block;
+    margin-bottom: 50px;
+}
+.contact{
+    margin-bottom: 20px;
+}
+.gallery{
+    margin-bottom: 10px;
+}
+.albums {
+    margin-bottom: 10px;
+}
+
 footer{
     text-align:center;
     padding:30px;
     background:black;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 /* version android  */
@@ -469,6 +516,16 @@ body.light h1{
 }
 body.light p {
     color: #d8c1a7;
+}
+
+body.light .skill-items span {
+    color: black;
+    font-weight: bold;
+}
+body.light .competence {
+    border: 2px solid rgb(43, 39, 39);
+    border-radius: 5px;
+    padding: 10px 10px 10px 10px;
 }
 
 /* natao js fa mety ihany koa

@@ -11,8 +11,66 @@
 <body>
 
 <header>
+<nav>
+    <img src="assets/images/E-vazo_logo_v2.png" id="logo" alt="">
 
-    <div id="nav-placeholder"></div>
+    <div class="menu-toggle">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <ul class="sidebar">
+
+        <li>
+            <a href="index.html" data-tooltip="Accueil">
+                <i class="fa-solid fa-house"></i>
+                <span class="nav-text">Accueil</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="pages/apropos.html" data-tooltip="À propos">
+                <i class="fa-solid fa-user"></i>
+                <span class="nav-text">À propos</span>
+                
+            </a>
+        </li>
+
+        <li>
+            <a href="pages/albums.html" data-tooltip="Albums">
+                <i class="fa-solid fa-compact-disc"></i>
+                <span class="nav-text">Albums</span>
+                
+            </a>
+        </li>
+
+        <li>
+            <a href="pages/concerts.html" data-tooltip="Concerts">
+                <i class="fa-solid fa-music"></i>
+                <span class="nav-text">Concerts</span>
+
+            </a>
+        </li>
+
+        <li>
+            <a href="pages/galeries.html" data-tooltip="Galerie">
+                <i class="fa-solid fa-image"></i>
+                <span class="nav-text">Galerie</span>
+                
+            </a>
+        </li>
+
+        <li>
+            <a href="pages/contact.html" data-tooltip="Contact">
+                <i class="fa-solid fa-envelope"></i>
+                <span class="nav-text">Contact</span>
+            </a>
+        </li>
+
+    </ul>
+    
+
+</nav>
+
     <section class="hero">
         <h1>Live Music Experience</h1>
 
@@ -78,6 +136,11 @@
         </div>
 
     </div>
+    <div class="btn_voir_plus">
+        <button id="plus_album">
+            Voir plus
+        </button>
+    </div>
 
 </section>
 
@@ -101,7 +164,7 @@
         <p>Acoustic Night</p>
     </div>
     <div class="btn_voir_plus">
-        <button>
+        <button id="plus_concert">
             Voir plus
         </button>
     </div>
@@ -124,7 +187,7 @@
 
     </div>
     <div class="btn_voir_plus">
-        <button>
+        <button id="plus_gallery">
             Voir plus
         </button>
     </div>
@@ -144,7 +207,7 @@
 
         <textarea placeholder="Votre message"></textarea>
 
-        <button class="btn">
+        <button class="btn" id="btn_envoyer">
             Envoyer
         </button>
 
@@ -156,6 +219,8 @@
 <footer>
 
     © 2026 E- vazo Music Portfolio
+
+    <p>111 111 111 Street NORTH ANKERANA</p>
 
 </footer>
 <button class="theme-toggle" id="theme-toggle">
@@ -197,11 +262,33 @@
 });
 </script>
 <!-- nav html -->
- <script src="assets/js/include.js"></script>
 <!-- nav -->
 <script src="assets/js/nav.js"></script>
 <!-- image hero  -->
 <script src="assets/js/animation.js"></script>
+<script>
+    const button= document.getElementById("plus_concert");
+    button.addEventListener("click", function() {
+        window.location.href = "pages/concerts.html";
+
+    });
+    const button2= document.getElementById("plus_gallery");
+    button2.addEventListener("click", function() {
+        window.location.href = "pages/galeries.html";
+
+    });
+    const button3= document.getElementById("plus_album");
+    button3.addEventListener("click", function() {
+        window.location.href = "pages/albums.html";
+
+    });
+    const button4= document.getElementById("btn_envoyer");
+    button4.addEventListener("click", function() {
+        window.location.href = "index.html";
+
+    });
+
+</script>
 
 
 </html>

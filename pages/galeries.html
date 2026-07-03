@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Portfolio</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"> 
+</head>
+<body>
+<nav>
+    <img src="../assets/images/E-vazo_logo_v2.png" id="logo" alt="">
+
+    <div class="menu-toggle">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <ul class="sidebar">
+
+        <li>
+            <a href="../index.html" data-tooltip="Accueil">
+                <i class="fa-solid fa-house"></i>
+                <span class="nav-text">Accueil</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="../pages/apropos.html" data-tooltip="À propos">
+                <i class="fa-solid fa-user"></i>
+                <span class="nav-text">À propos</span>
+                
+            </a>
+        </li>
+
+        <li>
+            <a href="../pages/albums.html" data-tooltip="Albums">
+                <i class="fa-solid fa-compact-disc"></i>
+                <span class="nav-text">Albums</span>
+                
+            </a>
+        </li>
+
+        <li>
+            <a href="../pages/concerts.html" data-tooltip="Concerts">
+                <i class="fa-solid fa-music"></i>
+                <span class="nav-text">Concerts</span>
+
+            </a>
+        </li>
+
+        <li>
+            <a href="../pages/galeries.html" data-tooltip="Galerie">
+                <i class="fa-solid fa-image"></i>
+                <span class="nav-text">Galerie</span>
+                
+            </a>
+        </li>
+
+        <li>
+            <a href="../pages/contact.html" data-tooltip="Contact">
+                <i class="fa-solid fa-envelope"></i>
+                <span class="nav-text">Contact</span>
+            </a>
+        </li>
+
+    </ul>
+    
+
+</nav>
+
+<section class="gallery">
+
+    <h2>Galerie</h2>
+
+    <div class="grid">
+
+        <img src="../assets/images/8990-Musician-Opportunities-Web-Banner-1024x338-1.jpg">
+        <img src="../assets/images/4d095f8aec1743cf917f209ff516b3810e423f77-1440x960.webp">
+        <img src="../assets/images/8990-Musician-Opportunities-Web-Banner-1024x338-1.jpg">
+        <img src="../assets/images/4d095f8aec1743cf917f209ff516b3810e423f77-1440x960.webp">
+        <img src="../assets/images/4d095f8aec1743cf917f209ff516b3810e423f77-1440x960.webp">
+        <img src="../assets/images/istockphoto-2104421890-612x612.jpg">
+
+    </div>
+    <div class="btn_voir_plus">
+        <button id="plus_gallery">
+            Voir plus
+        </button>
+    </div>
+
+</section>
+
+<footer>
+
+    © 2026 E- vazo Music Portfolio
+    <p>111 111 111 Street NORTH ANKERANA</p>
+
+
+</footer>
+<button class="theme-toggle" id="theme-toggle">
+    <i class="fa-solid fa-moon"></i>
+</button>
+
+</body>
+<script>
+    const button2= document.getElementById("plus_gallery");
+    button2.addEventListener("click", function() {
+        window.location.href = "../pages/galeries.html";
+
+    });
+</script>
+<script>
+    const themeBtn = document.getElementById("theme-toggle");
+    const icon = themeBtn.querySelector("i");
+    const eventElements = document.querySelectorAll(".concerts .event");
+    
+
+    themeBtn.addEventListener("click", () => {
+
+        document.body.classList.toggle("light");
+
+        const isLight = document.body.classList.contains("light");
+
+        // icône
+        if(isLight){
+            icon.classList.remove("fa-moon");
+            icon.classList.add("fa-sun");
+        }else{
+            icon.classList.remove("fa-sun");
+            icon.classList.add("fa-moon");
+        }
+
+        // 🎯 changement des concerts
+        eventElements.forEach(el => {
+            if(isLight){
+                el.style.color = "#e9d206";
+                el.style.background = "#000000"
+            }else{
+                el.style.color = "";
+                el.style.background = ""
+            }
+        });
+});
+</script>
+<!-- nav html -->
+<!-- nav -->
+<script src="../assets/js/nav.js"></script>
+<!-- image hero  -->
+<script src="../assets/js/animation.js"></script>
+
+
+</html>

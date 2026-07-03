@@ -1,21 +1,192 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Music Portfolio</title>
     <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"> 
-
+    <link rel="stylesheet" href="../bootstrap-5.3.8/dist/css/bootstrap.min.css">
 </head>
+<style>
+    body{
+        background-color: black;
+    }
+</style>
 <body>
-    <header>
-        <div id="nav-placeholder"></div>
-    </header>
+    <nav>
+        <img src="../assets/images/E-vazo_logo_v2.png" id="logo" alt="">
+
+        <div class="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <ul class="sidebar">
+
+            <li>
+                <a href="../index.html" data-tooltip="Accueil">
+                    <i class="fa-solid fa-house"></i>
+                    <span class="nav-text">Accueil</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="../pages/apropos.html" data-tooltip="À propos">
+                    <i class="fa-solid fa-user"></i>
+                    <span class="nav-text">À propos</span>
+                    
+                </a>
+            </li>
+
+            <li>
+                <a href="../pages/albums.html" data-tooltip="Albums">
+                    <i class="fa-solid fa-compact-disc"></i>
+                    <span class="nav-text">Albums</span>
+                    
+                </a>
+            </li>
+
+            <li>
+                <a href="../pages/concerts.html" data-tooltip="Concerts">
+                    <i class="fa-solid fa-music"></i>
+                    <span class="nav-text">Concerts</span>
+
+                </a>
+            </li>
+
+            <li>
+                <a href="../pages/galeries.html" data-tooltip="Galerie">
+                    <i class="fa-solid fa-image"></i>
+                    <span class="nav-text">Galerie</span>
+                    
+                </a>
+            </li>
+
+            <li>
+                <a href="../pages/contact.html" data-tooltip="Contact">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span class="nav-text">Contact</span>
+                </a>
+            </li>
+
+        </ul>
+        
+
+    </nav>
+
+<section id="apropos">
+    <div class="about">
+        <h2>À propos</h2>
     
+        <p>
+            Passionné par la musique depuis toujours, je compose des morceaux
+            mélangeant <span class="highlight">Rock</span>,
+            <span class="highlight" id="blue">Blues</span> et musique moderne.
+        </p>
+    
+        <p>
+            J’ai commencé la guitare à l’âge de 12 ans et j’ai participé à plusieurs
+            projets musicaux locaux.
+        </p>
+    
+        <p>
+            Mon objectif est de créer des sons authentiques qui transmettent des émotions fortes
+            sur scène comme en studio.
+        </p>
+    
+    </div>
+    
+    <div class="competence">
+        <!-- Blue -->
+        <div class="skill-items">
+            <span>
+                <i class="fas fa-paint-brush text-info"></i>  ROCK/ POP
+            </span>
+        
+            <div class="progress" style="height: 30px;">
+                <div class="progress-bar text-info" style="width:70%;height: 30px;"> 70 %</div>
+            </div>
+        </div>
+        <!-- Blue -->
+        <div class="skill-items">
+            <span>
+                <i class="fas fa-paint-brush text-info"></i>  BLUES/ FUSION
+            </span>
+            
+            <div class="progress" style="height: 30px; ">
+                <div class="progress-bar bg-warning text-info" style="width:50%;height: 30px;"> 50 %</div>
+            </div>
+        </div>
+        <!-- Blue -->
+        <div class="skill-items">
+            <span>
+                <i class="fas fa-paint-brush text-info"></i>  TSAPIKY/ FOLAKA
+            </span>
+            <div class="progress" style="height: 30px;">
+                <div class="progress-bar bg-danger text-info" style="width:20%; height: 30px;"> 20 %</div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+
+
+
+<footer>
+
+    © 2026 E- vazo Music Portfolio
+    <p>111 111 111 Street NORTH ANKERANA</p>
+
+
+</footer>
+<button class="theme-toggle" id="theme-toggle">
+    <i class="fa-solid fa-moon"></i>
+</button>
+
 </body>
-<script src="../assets/js/include.js" defer></script>
-<script src="assets/js/nav.js"></script>
+<script>
+    const themeBtn = document.getElementById("theme-toggle");
+    const icon = themeBtn.querySelector("i");
+    const eventElements = document.querySelectorAll(".concerts .event");
+    
+
+    themeBtn.addEventListener("click", () => {
+
+        document.body.classList.toggle("light");
+
+        const isLight = document.body.classList.contains("light");
+
+        // icône
+        if(isLight){
+            icon.classList.remove("fa-moon");
+            icon.classList.add("fa-sun");
+        }else{
+            icon.classList.remove("fa-sun");
+            icon.classList.add("fa-moon");
+        }
+
+        // 🎯 changement des concerts
+        eventElements.forEach(el => {
+            if(isLight){
+                el.style.color = "#e9d206";
+                el.style.background = "#000000"
+            }else{
+                el.style.color = "";
+                el.style.background = ""
+            }
+        });
+});
+</script>
+
+<!-- nav html -->
+<!-- nav -->
+<script src="../assets/js/nav.js"></script>
+<!-- image hero  -->
+<script src="../assets/js/animation.js"></script>
+<script src="../bootstrap-5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 
 </html>
