@@ -98,34 +98,37 @@
     </div>
     
     <div class="competence">
-        <!-- Blue -->
         <div class="skill-items">
             <span>
                 <i class="fas fa-paint-brush text-info"></i>  ROCK/ POP
             </span>
-        
-            <div class="progress" style="height: 30px;">
-                <div class="progress-bar text-info" style="width:70%;height: 30px;"> 70 %</div>
+            <div class="progress" style="height:30px;">
+                <div class="progress-bar bg-info" data-width="70">
+                    70%
+                </div>
             </div>
         </div>
-        <!-- Blue -->
         <div class="skill-items">
             <span>
                 <i class="fas fa-paint-brush text-info"></i>  BLUES/ FUSION
             </span>
-            
-            <div class="progress" style="height: 30px; ">
-                <div class="progress-bar bg-warning text-info" style="width:50%;height: 30px;"> 50 %</div>
+            <div class="progress" style="height:30px;">
+                <div class="progress-bar bg-success" data-width="90">
+                    90%
+                </div>
             </div>
+                  
         </div>
-        <!-- Blue -->
         <div class="skill-items">
             <span>
                 <i class="fas fa-paint-brush text-info"></i>  TSAPIKY/ FOLAKA
             </span>
-            <div class="progress" style="height: 30px;">
-                <div class="progress-bar bg-danger text-info" style="width:20%; height: 30px;"> 20 %</div>
+            <div class="progress" style="height:30px;">
+                <div class="progress-bar bg-danger" data-width="45">
+                    45%
+                </div>
             </div>
+            
         </div>
     </div>
 
@@ -178,6 +181,21 @@
                 el.style.background = ""
             }
         });
+});
+</script>
+<script>
+    window.addEventListener("load", () => {
+
+    document.querySelectorAll(".progress-bar").forEach(bar => {
+
+        const width = bar.dataset.width;
+
+        setTimeout(() => {
+            bar.style.width = width + "%";
+        }, 200);
+
+    });
+
 });
 </script>
 

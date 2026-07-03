@@ -230,6 +230,11 @@ section h2:hover::after{
 .progress {
     margin-top:  10px;
     margin-bottom: 10px;
+    overflow: hidden;
+}
+.progress-bar{
+    width:0;
+    transition: width 2s ease;
 }
 .skill-items span {
     margin-top: 10px;
